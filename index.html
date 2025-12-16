@@ -7,70 +7,148 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Homepage -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Ciao, sono Roberto</h1>
-            <p>Studente appassionato di Intelligenza Artificiale e Deep Learning. Esploro reti neurali, NLP e LLM per imparare e sperimentare.</p>
-            <a href="#projects" class="fancy-btn">Scopri i miei progetti</a>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Ciao, sono Roberto</h1>
+        <p>
+            Studente appassionato di Intelligenza Artificiale e Deep Learning.
+            Esploro reti neurali, NLP e <span class="tooltip">LLM
+                <span class="tooltip-text">
+                    Large Language Model. Still trying to tame it.
+                </span>
+            </span>
+            per imparare e sperimentare.
+        </p>
+
+        <a href="#projects" class="fancy-btn">Scopri i miei progetti</a>
+
+        <p class="code-comment">// still debugging the brain</p>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto">
+        <p>
+            I don’t chase hype.<br>
+            I build, break, and understand models.
+        </p>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="window">
+        <div class="window-header">About Me</div>
+        <div class="window-body">
+            <p>
+                Sono uno studente curioso e determinato a capire come funzionano davvero
+                le reti neurali. Questo sito è il mio spazio di sperimentazione,
+                documentazione e crescita.
+            </p>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>Chi sono</h2>
-        <p>Sono uno studente appassionato di AI e Machine Learning, sempre curioso di capire come funzionano le reti neurali e come costruire modelli di linguaggio avanzati. Il mio obiettivo è sperimentare progetti concreti e condividere le conoscenze attraverso questo sito e il mio libro.</p>
+    <!-- SYSTEM INFO -->
+    <section class="window">
+        <div class="window-header">System Information</div>
+        <div class="window-body system-info">
+            <p><strong>Status:</strong> Learning mode</p>
+            <p><strong>Current focus:</strong> Neural Networks, NLP, LLM</p>
+            <p><strong>Runtime:</strong> Brain v0.3 beta</p>
+            <p><strong>Errors:</strong> Many, but educational</p>
+        </div>
     </section>
 
-    <!-- Sezione Progetti -->
-    <section id="projects">
-        <h2>I miei progetti</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>Rete CNN per classificazione immagini</h3>
-                <p>Piccola rete per distinguere immagini di cifre scritte a mano. Ho sperimentato convoluzioni, pooling e funzioni di attivazione. Ottimo progetto iniziale per capire il funzionamento delle CNN.</p>
-            </div>
-            <div class="project-card">
-                <h3>Rete per conversione Fahrenheit-Celsius</h3>
-                <p>Rete semplice che impara a convertire valori di temperatura. Ho approfondito concetti di normalizzazione e training su piccoli dataset.</p>
-            </div>
-            <div class="project-card">
-                <h3>Sentiment Analysis</h3>
-                <p>Modello NLP che identifica se un testo è positivo, negativo o neutro. Esperimento pratico su embedding e classificazione di frasi.</p>
-            </div>
-            <div class="project-card coming-soon">
-                <h3>LLM - Coming Soon</h3>
-                <p>Sto lavorando al mio primo progetto LLM personale. Resta aggiornato per vedere il progresso!</p>
+    <!-- PROJECTS -->
+    <section id="projects" class="window">
+        <div class="window-header">Projects</div>
+        <div class="window-body">
+            <div class="projects-container">
+
+                <div class="project-card">
+                    <h3>CNN Image Classification</h3>
+                    <p>
+                        Rete convoluzionale per il riconoscimento di cifre scritte a mano.
+                        Primo contatto serio con convoluzioni e pooling.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Fahrenheit → Celsius</h3>
+                    <p>
+                        Rete neurale semplice per apprendere una relazione matematica.
+                        Esperimento base su training e normalizzazione.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Sentiment Analysis</h3>
+                    <p>
+                        Modello NLP per classificare testi come positivi, negativi o neutri.
+                        Primo approccio agli embedding.
+                    </p>
+                </div>
+
+                <div class="project-card coming-soon">
+                    <h3>LLM Project</h3>
+                    <p>Status: compiling neurons…</p>
+                    <p>Training progress:</p>
+
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+
+                    <p class="eta">ETA: unknown, learning in progress</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Sezione Libro -->
-    <section id="book">
-        <h2>Il mio libro</h2>
-        <div class="book-card">
+    <!-- CHANGELOG -->
+    <section class="window">
+        <div class="window-header">Changelog</div>
+        <div class="window-body changelog">
+            <ul>
+                <li><strong>v0.1</strong> First neural network experiments</li>
+                <li><strong>v0.2</strong> CNN for image classification</li>
+                <li><strong>v0.3</strong> Sentiment Analysis added</li>
+                <li><strong>v0.4</strong> Book draft published</li>
+                <li><strong>v0.5</strong> LLM project in progress</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- BOOK -->
+    <section class="window">
+        <div class="window-header">From Neurons to LLM</div>
+        <div class="window-body book-card">
             <img src="cover.svg" alt="Copertina libro">
-            <p>Un viaggio pratico nel mondo dell’Intelligenza Artificiale: dalle prime reti neurali ai progetti più complessi, con esempi reali e spiegazioni semplici per chi vuole imparare e sperimentare nel deep learning.
-            <br>PS: Non è un libro finito e tantomeno un libro approfondito, sono solo appunti.</p>
-            <a href="From Neurons to LLM.pdf" download class="fancy-btn">Scaricalo in PDF</a>
+            <p>
+                Un viaggio pratico nel mondo dell’Intelligenza Artificiale:
+                dalle prime reti neurali ai modelli di linguaggio.
+                <br><br>
+                Nota: non è un libro completo, ma una raccolta di appunti,
+                esperimenti e riflessioni.
+            </p>
+
+            <a href="From Neurons to LLM.pdf" download class="fancy-btn">
+                Scaricalo in PDF
+            </a>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- STATUS BAR -->
+    <div class="status-bar">
+        <span>Status: Learning…</span>
+        <span>CPU: Human | GPU: None | RAM: Coffee dependent</span>
+    </div>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Roberto. <a href="https://github.com/robworkhubb">GitHub</a>
+        <p>
+            © 2025 Roberto ·
+            <a href="https://github.com/robworkhubb" target="_blank">GitHub</a>
+        </p>
     </footer>
 
-    <script>
-        // Scorrimento fluido
-        const links = document.querySelectorAll('nav ul li a');
-        for(const link of links){
-            link.addEventListener('click', function(e){
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth' });
-            });
-        }
-    </script>
 </body>
 </html>
