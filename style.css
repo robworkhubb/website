@@ -1,18 +1,65 @@
+/* ===== BODY & PAGE ===== */
 body {
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
-    background-color: #bcdcff;
-    color: #000080;
     margin: 0;
-    line-height: 1.6;
-    
+    min-height: 100vh;
+    background: linear-gradient(#3a6ea5, #2b4f7a);
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000080;
 }
 
-/* HERO */
-.hero {
-    background: linear-gradient(#9fcfff, #cfe8ff);
-    padding: 5rem 2rem;
+.page {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #bcdcff;
+    border: 3px solid #000080;
+    box-shadow:
+        0 0 0 4px #ffffff,
+        12px 12px 0 #000080;
+}
+
+/* ===== XP TITLE BAR ===== */
+.xp-titlebar {
+    background: linear-gradient(#0058ee, #003db8);
+    color: white;
+    padding: 0.4rem 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 2px solid #000080;
+}
+
+.xp-buttons span {
+    width: 14px;
+    height: 14px;
+    margin-left: 6px;
+    display: inline-block;
+    background-color: #d6e8ff;
+    border: 1px solid #000080;
     text-align: center;
-    border-bottom: 3px solid #000080;
+    color: #000;
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    background:
+        linear-gradient(#9fcfff, #cfe8ff),
+        repeating-linear-gradient(
+            to right,
+            rgba(0,0,0,0.03),
+            rgba(0,0,0,0.03) 1px,
+            transparent 1px,
+            transparent 40px
+        );
 }
 
 .hero h1 {
@@ -26,7 +73,31 @@ body {
     font-size: 1.15rem;
 }
 
-/* BUTTON XP */
+.hero-status {
+    margin-top: 2rem;
+    font-family: "Courier New", monospace;
+    background-color: #000;
+    color: #00ff00;
+    padding: 1rem;
+    display: inline-block;
+    border: 2px inset #404040;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.uptime {
+    font-family: "Courier New", monospace;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+.code-comment {
+    font-family: "Courier New", monospace;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* ===== BUTTON XP ===== */
 .fancy-btn {
     padding: 0.7rem 2rem;
     font-weight: bold;
@@ -39,6 +110,7 @@ body {
     text-decoration: none;
     cursor: pointer;
     display: inline-block;
+    transition: all 0.1s;
 }
 
 .fancy-btn:hover {
@@ -52,7 +124,7 @@ body {
     border-bottom: 2px solid #ffffff;
 }
 
-/* MANIFESTO */
+/* ===== MANIFESTO ===== */
 .manifesto {
     background-color: #e6f0ff;
     text-align: center;
@@ -65,7 +137,7 @@ body {
     font-weight: bold;
 }
 
-/* WINDOWS */
+/* ===== WINDOWS ===== */
 .window {
     max-width: 1100px;
     margin: 4rem auto;
@@ -87,13 +159,13 @@ body {
     text-align: center;
 }
 
-/* SYSTEM INFO */
+/* ===== SYSTEM INFO ===== */
 .system-info p {
     font-family: "Courier New", monospace;
     margin: 0.4rem 0;
 }
 
-/* PROJECTS */
+/* ===== PROJECTS ===== */
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -120,7 +192,7 @@ body {
     font-style: italic;
 }
 
-/* PROGRESS BAR */
+/* ===== PROGRESS BAR ===== */
 .progress-bar {
     width: 100%;
     height: 16px;
@@ -138,7 +210,7 @@ body {
     font-size: 0.85rem;
 }
 
-/* CHANGELOG */
+/* ===== CHANGELOG ===== */
 .changelog ul {
     list-style: square;
     text-align: left;
@@ -147,14 +219,14 @@ body {
     font-family: "Courier New", monospace;
 }
 
-/* BOOK */
+/* ===== BOOK ===== */
 .book-card img {
     width: 100%;
     border: 2px solid #3399ff;
     margin-bottom: 1rem;
 }
 
-/* TOOLTIP */
+/* ===== TOOLTIP ===== */
 .tooltip {
     position: relative;
     font-weight: bold;
@@ -171,13 +243,14 @@ body {
     top: 120%;
     left: 0;
     font-size: 0.8rem;
+    z-index: 10;
 }
 
 .tooltip:hover .tooltip-text {
     visibility: visible;
 }
 
-/* STATUS BAR */
+/* ===== STATUS BAR ===== */
 .status-bar {
     display: flex;
     justify-content: space-between;
@@ -188,13 +261,7 @@ body {
     font-size: 0.85rem;
 }
 
-/* CODE COMMENT */
-.code-comment {
-    font-family: "Courier New", monospace;
-    color: #555;
-}
-
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
     background-color: #3399ff;
     color: white;
@@ -213,17 +280,16 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 
     body {
-        
         font-size: 16px;
     }
 
-    /* HERO */
     .hero {
-        padding: 3rem 1.2rem;
+        padding: 1.5rem 1rem;
+        min-height: auto;   
     }
 
     .hero h1 {
@@ -234,14 +300,12 @@ footer a:hover {
         font-size: 1rem;
     }
 
-    /* BUTTON */
     .fancy-btn {
         width: 100%;
         max-width: 280px;
         text-align: center;
     }
 
-    /* WINDOWS */
     .window {
         margin: 2rem 1rem;
     }
@@ -254,7 +318,6 @@ footer a:hover {
         font-size: 0.95rem;
     }
 
-    /* MANIFESTO */
     .manifesto {
         padding: 1.5rem 1rem;
     }
@@ -263,7 +326,6 @@ footer a:hover {
         font-size: 1.05rem;
     }
 
-    /* PROJECTS */
     .projects-container {
         flex-direction: column;
         gap: 1.5rem;
@@ -283,25 +345,21 @@ footer a:hover {
         font-size: 0.95rem;
     }
 
-    /* BOOK */
     .book-card img {
         max-width: 100%;
         height: auto;
     }
 
-    /* CHANGELOG */
     .changelog ul {
         font-size: 0.9rem;
         padding-left: 1rem;
     }
 
-    /* TOOLTIP FIX MOBILE */
     .tooltip-text {
         width: 180px;
         font-size: 0.75rem;
     }
 
-    /* STATUS BAR */
     .status-bar {
         flex-direction: column;
         gap: 0.2rem;
@@ -309,14 +367,12 @@ footer a:hover {
         text-align: center;
     }
 
-    /* FOOTER */
     footer {
         font-size: 0.85rem;
         padding: 0.8rem;
     }
 }
 
-/* EXTRA SMALL DEVICES */
 @media (max-width: 420px) {
 
     .hero h1 {
