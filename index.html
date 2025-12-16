@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roberto - AI & Deep Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Homepage -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Ciao, sono Roberto</h1>
+            <p>Studente appassionato di Intelligenza Artificiale e Deep Learning. Esploro reti neurali, NLP e LLM per imparare e sperimentare.</p>
+            <a href="#projects" class="fancy-btn">Scopri i miei progetti</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Chi sono</h2>
+        <p>Sono uno studente appassionato di AI e Machine Learning, sempre curioso di capire come funzionano le reti neurali e come costruire modelli di linguaggio avanzati. Il mio obiettivo è sperimentare progetti concreti e condividere le conoscenze attraverso questo sito e il mio libro.</p>
+    </section>
+
+    <!-- Sezione Progetti -->
+    <section id="projects">
+        <h2>I miei progetti</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Rete CNN per classificazione immagini</h3>
+                <p>Piccola rete per distinguere immagini di cifre scritte a mano. Ho sperimentato convoluzioni, pooling e funzioni di attivazione. Ottimo progetto iniziale per capire il funzionamento delle CNN.</p>
+            </div>
+            <div class="project-card">
+                <h3>Rete per conversione Fahrenheit-Celsius</h3>
+                <p>Rete semplice che impara a convertire valori di temperatura. Ho approfondito concetti di normalizzazione e training su piccoli dataset.</p>
+            </div>
+            <div class="project-card">
+                <h3>Sentiment Analysis</h3>
+                <p>Modello NLP che identifica se un testo è positivo, negativo o neutro. Esperimento pratico su embedding e classificazione di frasi.</p>
+            </div>
+            <div class="project-card coming-soon">
+                <h3>LLM - Coming Soon</h3>
+                <p>Sto lavorando al mio primo progetto LLM personale. Resta aggiornato per vedere il progresso!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Libro -->
+    <section id="book">
+        <h2>Il mio libro</h2>
+        <div class="book-card">
+            <img src="cover.svg" alt="Copertina libro">
+            <p>Un viaggio pratico nel mondo dell’Intelligenza Artificiale: dalle prime reti neurali ai progetti più complessi, con esempi reali e spiegazioni semplici per chi vuole imparare e sperimentare nel deep learning.
+            <br>PS: Non è un libro finito e tantomeno un libro approfondito, sono solo appunti.</p>
+            <a href="From Neurons to LLM.pdf" download class="fancy-btn">Scaricalo in PDF</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Roberto. <a href="https://github.com/robworkhubb">GitHub</a>
+    </footer>
+
+    <script>
+        // Scorrimento fluido
+        const links = document.querySelectorAll('nav ul li a');
+        for(const link of links){
+            link.addEventListener('click', function(e){
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+</html>
