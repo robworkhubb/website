@@ -1,7 +1,7 @@
 /* ===== BODY & PAGE ===== */
 body {
     margin: 0;
-    min-height: 100vh;
+    min-height: auto;
     background: linear-gradient(#3a6ea5, #2b4f7a);
     display: flex;
     justify-content: center;
@@ -220,11 +220,35 @@ body {
 }
 
 /* ===== BOOK ===== */
+.books-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.book-card {
+    flex: 1;
+    max-width: 420px;
+    background-color: #f2f7ff;
+    border: 2px solid #3399ff;
+    padding: 1.5rem;
+    box-shadow: 3px 3px 0 #000080;
+    text-align: center;
+}
+
 .book-card img {
-    width: 100%;
+    width: 70%;
+    max-width: 220px;
     border: 2px solid #3399ff;
     margin-bottom: 1rem;
 }
+
+.book-card h3 {
+    margin-top: 0;
+    font-size: 1.05rem;
+}
+
 
 /* ===== TOOLTIP ===== */
 .tooltip {
@@ -345,10 +369,19 @@ footer a:hover {
         font-size: 0.95rem;
     }
 
-    .book-card img {
-        max-width: 100%;
-        height: auto;
+    .books-container {
+        flex-direction: column;
+        gap: 1.5rem;
     }
+
+    .book-card {
+        max-width: 100%;
+    }
+
+    .book-card img {
+        width: 60%;
+    }
+
 
     .changelog ul {
         font-size: 0.9rem;
